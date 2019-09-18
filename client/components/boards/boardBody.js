@@ -205,7 +205,7 @@ BlazeComponent.extendComponent({
     // creation form by clicking on the corresponding element.
     const currentBoard = Boards.findOne(Session.get('currentBoard'));
     if (userIsMember() && currentBoard.lists().count() === 0) {
-      boardComponent.openNewListForm();
+      boardComponent.openNewListForm.bind(this)();
     }
   },
 
